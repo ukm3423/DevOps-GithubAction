@@ -15,5 +15,21 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
+        echo This is my first workflow,
+        echo test, and deploy your project.
+
+    - name: Run a single-line script
+      run: |
+       echo Hello This  is my second workflow,
+       echo test, and deploy your project.
+
+  job2 : 
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a multi-line script
+      run: |
+        echo This is my first workflow,
         echo test, and deploy your project.
