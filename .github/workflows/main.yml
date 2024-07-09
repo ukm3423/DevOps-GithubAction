@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        echo This is my first workflow,
+        echo This is my job1 workflow,
         echo test, and deploy your project.
 
     - name: Run a single-line script
@@ -24,12 +24,19 @@ jobs:
        echo test, and deploy your project.
 
   job2 : 
-    
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        echo This is my first workflow,
+        echo This is my job2 workflow,
+        echo test, and deploy your project.
+
+  job3 : 
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a multi-line script
+      run: |
+        echo This is my job3 workflow,
         echo test, and deploy your project.
