@@ -25,6 +25,7 @@ jobs:
 
   job2 : 
     runs-on: ubuntu-latest
+    needs: job1
     steps:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
@@ -34,6 +35,7 @@ jobs:
 
   job3 : 
     runs-on: macos-latest
+    needs: job2
     steps:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
